@@ -1,0 +1,58 @@
+.header {
+  background-image: url("img/header_start_img.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 930px;
+
+  &__nav {
+    margin-right: 220px;
+    margin-top: 24px;
+
+    &-login {
+      margin-left: 91%;
+
+      a {
+        font-size: 14px;
+      }
+    }
+
+    &-menu {
+      padding-top: 40px;
+      margin-left: 60%;
+
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+
+  ul {
+    height: 40px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+      color: grey;
+      cursor: pointer;
+    }
+  }
+
+  &__box {
+    margin-top: 290px;
+    margin-left: 920px;
+
+    &-btns {
+      margin-top: 95px;
+    }
+  }
+}
+
+
+

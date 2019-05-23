@@ -1,0 +1,21 @@
+.big {
+  font-size: 34px;
+  padding: 20px;
+  margin: 19px;
+  width: 290px;
+  height: 120px;
+  background: white;
+  border: 1px solid black;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.small {
+  font-size: 18px;
+  padding: 13px;
+  width: 102px;
+  background: transparent;
+  border: 1px solid black;
+}

@@ -1,0 +1,22 @@
+.steps {
+  margin-top: 60px;
+
+  &__box {
+    display: flex;
+    justify-content: space-evenly;
+    background: #c5c5c5;
+    width: 1180px;
+    height: 328px;
+    margin-left: 330px;
+    margin-top: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  &__btn {
+    margin-top: 35px;
+  }
+}

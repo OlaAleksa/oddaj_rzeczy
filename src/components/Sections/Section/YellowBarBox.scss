@@ -1,0 +1,15 @@
+.yellow-bar__box {
+  width: 370px;
+  margin-top: 76px;
+  margin-bottom: 92px;
+
+  &-number {
+    font-size: 70px;
+  }
+
+  &-title {
+    margin-top: 40px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+  }
+}

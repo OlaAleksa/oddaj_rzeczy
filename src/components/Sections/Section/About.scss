@@ -1,0 +1,23 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  background: #c5c5c5;
+  padding-top: 53px;
+  margin-top: 70px;
+
+  &__text {
+    width: 945px;
+    font-size: 30px;
+    margin: auto;
+    padding: 115px;
+    line-height: 55px;
+  }
+
+  &__img {
+    background-image: url("img/about.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 856px;
+    width: 1024px;
+  }
+}

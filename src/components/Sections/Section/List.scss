@@ -1,0 +1,38 @@
+.list {
+  height: 1055px;
+  position: relative;
+
+  &__text-container {
+    position: absolute;
+    top: 60px;
+    left: 610px;
+    font-size: 22px;
+    width: 610px;
+    line-height: 35px;
+
+    &-btns {
+      margin-top: 45px;
+      margin-bottom: 45px;
+      display: flex;
+      justify-content: space-evenly;
+
+      &--btn {
+        width: 208px;
+
+        &:hover {
+          cursor: pointer;
+          color: lightgrey;
+        }
+      }
+    }
+  }
+
+  &__pagination-container {
+    width: 1200px;
+    position: absolute;
+    top: 929px;
+    left: 320px;
+    font-size: 25px;
+  }
+
+}
