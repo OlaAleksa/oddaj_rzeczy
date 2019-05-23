@@ -3,6 +3,18 @@ import './YellowBar.scss';
 import Box from './YellowBarBox.js'
 
 class YellowBar extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            bags: 0,
+            organizations: 0,
+            collections: 0,
+        };
+    }
+    componentDidMount() {
+        // Tu pobierz dane z serwisu
+    }
     render() {
         return <div id="yellow-bar" className="yellow-bar">
             <Box
