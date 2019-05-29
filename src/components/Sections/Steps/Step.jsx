@@ -1,7 +1,7 @@
 import React from "react";
 import './Step.scss'
 
-class Step extends React.Component {
+export class Step extends React.Component {
     render() {
         return <div className="steps__box-small">
             <img src={this.props.src} alt={this.props.alt}/>
@@ -11,4 +11,3 @@ class Step extends React.Component {
         </div>
     }
 }
-export default Step

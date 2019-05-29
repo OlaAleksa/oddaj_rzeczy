@@ -1,10 +1,10 @@
-.list__foundations-container {
+.list__institutions-container {
   width: 1265px;
   position: absolute;
   top: 550px;
   left: 269px;
 
-  &-foundations {
+  .list__institutions-container-institutions {
     display: flex;
     justify-content: space-between;
 
@@ -33,5 +33,21 @@
         font-size: 19px;
       }
     }
+  }
+}
+.list__pagination-container {
+  width: 1200px;
+  position: absolute;
+  top: 405px;
+  left: 580px;
+  font-size: 25px;
+  list-style: none;
+  display: flex;
+
+  li {
+    margin-right: 0.3em;
+    user-select: none;
+    cursor: pointer;
+    color:black;
   }
 }

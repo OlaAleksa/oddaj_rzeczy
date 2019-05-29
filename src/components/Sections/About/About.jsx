@@ -1,9 +1,8 @@
 import React from "react";
-
 import { Decoration } from "../../Decoration";
 import './About.scss'
 
-class About extends React.Component {
+export class About extends React.Component {
     render() {
         return <div id="about" className="about">
             <div className="about__text">
@@ -17,4 +16,4 @@ class About extends React.Component {
     }
 }
 
-export default About
+

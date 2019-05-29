@@ -1,7 +1,7 @@
 import React from "react";
 import './YellowBarBox.scss'
 
-class Box extends React.Component {
+export class Box extends React.Component {
     render() {
         return <div className="yellow-bar__box">
             <div className="yellow-bar__box-number">{this.props.number}</div>
@@ -11,5 +11,3 @@ class Box extends React.Component {
         </div>
     }
 }
-
-export default Box

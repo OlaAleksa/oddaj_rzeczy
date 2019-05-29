@@ -9,30 +9,6 @@
     position: absolute;
     top: 135px;
     left: 1100px;
-
-    form {
-      margin-top: 50px;
-      line-height: 87px;
-
-      label {
-        margin-right: 330px;
-      }
-
-      input {
-        font-size: 20px;
-        background: transparent;
-        border: 1px solid;
-        border-color: transparent transparent black transparent;
-        margin-right: 30px;
-        text-align: left;
-        width: 275px;
-        height: 48px;
-      }
-
-      input:last-of-type {
-        width: 580px
-      }
-    }
   }
 
   &__nav {
@@ -62,3 +38,4 @@
     }
   }
 }
+

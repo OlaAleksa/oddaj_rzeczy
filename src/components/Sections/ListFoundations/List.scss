@@ -23,16 +23,11 @@
           cursor: pointer;
           color: lightgrey;
         }
+
+        &.active {
+          border: 1px solid black;
+        }
       }
     }
   }
-
-  &__pagination-container {
-    width: 1200px;
-    position: absolute;
-    top: 929px;
-    left: 320px;
-    font-size: 25px;
-  }
-
 }

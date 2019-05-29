@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.scss';
-import Header from '../components/Header/Header.js'
-import Sections from '../components/Sections/Sections.js'
-import Footer from '../components/Footer/Footer.js'
+import { Header } from '../components/Header/Header.jsx'
+import { Sections } from '../components/Sections/Sections.jsx'
+import { Footer } from '../components/Footer/Footer.jsx'
 
-class App extends React.Component {
+export class App extends React.Component {
     render() {
         return (<div className="App">
             <Header />
@@ -15,4 +15,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+

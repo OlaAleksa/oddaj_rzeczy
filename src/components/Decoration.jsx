@@ -1,6 +1,6 @@
 import React from 'react';
 import './Decoration.scss';
-import decoration from "./img/decoration.png";
+import decoration from "./decoration.png";
 
 export class Decoration extends React.Component{
     render() {
@@ -13,9 +13,10 @@ export class Decoration extends React.Component{
 
         return <div className="Decoration">
             {
-                texts.map((text) => <p className='Decoration__paragraph'>{text}</p>)
+                texts.map((text, index) => <p key={index} className='Decoration__paragraph'>{text}</p>)
             }
             <img className='Decoration__img' src={decoration} alt="decoration"/>
         </div>
     }
 }
+

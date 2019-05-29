@@ -1,29 +1,29 @@
 import React from 'react';
 
 import './Header.scss';
-import Button from '../Button.js'
-import Decoration from '../Decoration.js'
-import { UserService } from '../../services/user.service';
+import { Button } from '../Button.jsx'
+import { Decoration } from '../Decoration.jsx'
+// import { UserService } from '../../services/user.service';
 
-class Header extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.userService = new UserService();
-
-        this.state = {
-            userLoggedIn: false,
-        };
-    }
-
-    componentDidMount() {
-        //  Sprawdź czy użytkownik jest zalogowany
-        this.userService.getUser().then((user) => {
-            this.setState({
-                userLoggedIn: Boolean(user),
-            });
-        });
-    }
+export class Header extends React.Component {
+    // constructor(props) {
+    //     super(props);
+    //
+    //     this.userService = new UserService();
+    //
+    //     this.state = {
+    //         userLoggedIn: false,
+    //     };
+    // }
+    //
+    // componentDidMount() {
+    //     //  Sprawdź czy użytkownik jest zalogowany
+    //     this.userService.getUser().then((user) => {
+    //         this.setState({
+    //             userLoggedIn: Boolean(user),
+    //         });
+    //     });
+    // }
 
     render() {
         return <div id="header" className="header">
@@ -45,7 +45,7 @@ class Header extends React.Component {
                 </nav>
             </div>
             <div className="header__box">
-                <Decoration text={'Zacznij pomogać!'} subText={'Oddaj niechciane rzeczy w zaufane ręcę'}/>
+                <Decoration text={['Zacznij pomagać!', 'Oddaj niechciane rzeczy w zaufane ręce']}/>
                 <div className="header__box-btns">
                     <Button text={'ODDAJ RZECZY'}/>
                     <Button text={'ZORGANIZUJ ZBIÓRKĘ'}/>
@@ -56,5 +56,3 @@ class Header extends React.Component {
     }
 }
 
-
-export default Header

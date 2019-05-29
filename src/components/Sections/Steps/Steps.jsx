@@ -4,11 +4,11 @@ import arrow from "./img/arrowdown.png";
 import search from "./img/search.png";
 import delivery from "./img/delivery.png";
 import "./Steps.scss"
-import Button from "../../Button";
-import Decoration from "../../Decoration.js";
-import Step from "./Step.js"
+import { Button } from "../../Button";
+import { Decoration } from "../../Decoration.jsx";
+import { Step } from "./Step.jsx"
 
-class Steps extends React.Component {
+export class Steps extends React.Component {
     render() {
         return <div id="steps" className="steps">
             <Decoration text={'Wystarczą 4 proste kroki'}/>
@@ -36,11 +36,9 @@ class Steps extends React.Component {
             </div>
             <div className="steps__btn">
                 <a href="#header">
-                    <Button text={'ZORGANIZUJ ZBIÓRKĘ'}/>
+                    <Button big text={'ZORGANIZUJ ZBIÓRKĘ'}/>
                 </a>
             </div>
         </div>
     }
 }
-
-export default Steps
