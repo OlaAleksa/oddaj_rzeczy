@@ -7,12 +7,11 @@ import "./Steps.scss"
 import { Button } from "../../Button";
 import { Decoration } from "../../Decoration.jsx";
 import { Step } from "./Step.jsx"
-
 export class Steps extends React.Component {
     render() {
-        return <div id="steps" className="steps">
+        return <div id="steps" className="Steps">
             <Decoration text={'Wystarczą 4 proste kroki'}/>
-            <div className="steps__box">
+            <div className="Steps__box">
                 <Step
                     src={hands}
                     alt={'hands'}
@@ -34,7 +33,7 @@ export class Steps extends React.Component {
                     biggerText={'Zamów kuriera'}
                     text={'kurier przyjedzie w dogodnym terminie'}/>
             </div>
-            <div className="steps__btn">
+            <div className="Steps__btn">
                 <a href="#header">
                     <Button big text={'ZORGANIZUJ ZBIÓRKĘ'}/>
                 </a>

@@ -17,7 +17,7 @@ export class YellowBar extends React.Component {
     //
     // }
     render() {
-        return <div id="yellow-bar" className="yellow-bar">
+        return <div id="yellow-bar" className="Yellow-bar">
             <Box
                 number={'10'}
                 title={'ODDANYCH WORKÓW'}/>

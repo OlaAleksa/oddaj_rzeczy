@@ -27,13 +27,13 @@ changeInstitutionType = (e) => {
 
 
     render() {
-        return <div id="list" className="list">
-            <div className="list__text-container">
+        return <div id="list" className="List">
+            <div className="List__text-container">
                 <Decoration text={'Komu pomagamy?'}/>
-                <div className="list__text-container-btns">
-                    <div id='foundations' onClick={this.changeInstitutionType} className="list__text-container-btns--btn active">Fundacjom</div>
-                    <div id='organizations' onClick={this.changeInstitutionType} className="list__text-container-btns--btn">Organizacjom pozarządowym</div>
-                    <div id='collections' onClick={this.changeInstitutionType} className="list__text-container-btns--btn">Lokalnym zbiórkom</div>
+                <div className="List__text-container-btns">
+                    <div id='foundations' onClick={this.changeInstitutionType} className="List__text-container-btns--btn active">Fundacjom</div>
+                    <div id='organizations' onClick={this.changeInstitutionType} className="List__text-container-btns--btn">Organizacjom pozarządowym</div>
+                    <div id='collections' onClick={this.changeInstitutionType} className="List__text-container-btns--btn">Lokalnym zbiórkom</div>
                 </div>
                 <p>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić
                     czym się zajmują, komu pomagają i czego potrzebują.</p>

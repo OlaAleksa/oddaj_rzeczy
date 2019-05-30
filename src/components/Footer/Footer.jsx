@@ -8,14 +8,14 @@ import { Form } from './FooterForm.jsx';
 export class Footer extends React.Component {
 
     render() {
-        return <div id="footer" className="footer">
-            <div className="footer__form">
+        return <div id="footer" className="Footer">
+            <div className="Footer__form">
                 <Decoration text={'Skontaktuj się z nami'}/>
                 <Form />
             </div>
-            <div className="footer__nav">
+            <div className="Footer__nav">
                 <nav>
-                    <ul className="footer__nav-menu">
+                    <ul className="Footer__nav-menu">
                         <div className="copyright">
                             <li>Copyright 2015 &copy; by Anna Dadej</li>
                         </div>

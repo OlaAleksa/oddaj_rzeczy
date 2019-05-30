@@ -3,7 +3,7 @@ import './Step.scss'
 
 export class Step extends React.Component {
     render() {
-        return <div className="steps__box-small">
+        return <div className="Steps__box-small">
             <img src={this.props.src} alt={this.props.alt}/>
             <p className="first">{this.props.biggerText}</p>
             <hr/>

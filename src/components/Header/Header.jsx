@@ -26,16 +26,16 @@ export class Header extends React.Component {
     // }
 
     render() {
-        return <div id="header" className="header">
-            <div className="header__nav">
+        return <div id="header" className="Header">
+            <div className="Header__nav">
                 <nav>
-                    <ul className="header__nav-login">
+                    <ul className="Header__nav-login">
                         <li><a href="#">Zaloguj</a></li>
                         <li><a href="#">Załóż konto</a></li>
                     </ul>
                 </nav>
                 <nav>
-                    <ul className="header__nav-menu">
+                    <ul className="Header__nav-menu">
                         <li><a href="#">Start</a></li>
                         <li><a href="#steps">O co chodzi?</a></li>
                         <li><a href="#about">O nas</a></li>
@@ -44,9 +44,9 @@ export class Header extends React.Component {
                     </ul>
                 </nav>
             </div>
-            <div className="header__box">
+            <div className="Header__box">
                 <Decoration text={['Zacznij pomagać!', 'Oddaj niechciane rzeczy w zaufane ręce']}/>
-                <div className="header__box-btns">
+                <div className="Header__box-btns">
                     <Button text={'ODDAJ RZECZY'}/>
                     <Button text={'ZORGANIZUJ ZBIÓRKĘ'}/>
                 </div>

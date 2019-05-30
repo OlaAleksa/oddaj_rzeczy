@@ -27,7 +27,7 @@ export class Institutions extends React.Component {
         const currentFoundations = foundations.slice(indexOfFirstFoundation, indexOfLastFoundation);
 
         const renderFoundations = currentFoundations.map((foundation, index) =>{
-            return <div key={index} className="list__institutions-container-institutions">
+            return <div key={index} className="List__institutions-container-institutions">
                 <div className="box-right">
                     <h3>Fundacja "{foundation}"</h3>
                     <p>Cel i misja: {foundation}</p>
@@ -56,9 +56,9 @@ export class Institutions extends React.Component {
                 </li>
             );
         });
-        return <div className="list__institutions-container">
+        return <div className="List__institutions-container">
                 {renderFoundations}
-            <ul className="list__pagination-container">
+            <ul className="List__pagination-container">
                 {renderPageNumbers}
             </ul>
         </div>
