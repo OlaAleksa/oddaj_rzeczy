@@ -1,6 +1,8 @@
 import React from 'react';
+
 import './FooterForm.scss';
-import { Button } from "../Button.jsx";
+import { Button } from "../Button/Button.jsx";
+import { VARIANT_SMALL } from "../Button/Button";
 
 export class Form extends React.Component {
     constructor(props) {
@@ -37,7 +39,6 @@ export class Form extends React.Component {
                 });
                 break;
             case 'message':
-
                 this.setState({
                     message: e.target.value,
                 });
@@ -53,6 +54,7 @@ export class Form extends React.Component {
 
     handleOnSubmit = (e) => {
         e.preventDefault();
+        e.stopPropagation();
 
         const validation = this.formValidation();
         console.log(validation);
@@ -83,23 +85,28 @@ export class Form extends React.Component {
 
 
     formValidation = () => {
+        debugger;
         let name = false;
         let email= false;
         let message = false;
         let correct = false;
 
-        if(this.state.name !== '') {
+        if (this.state.name !== '') {
             name = true;
         }
+
         if(this.state.email !== '' && this.state.email.indexOf('@') !== -1) {
             email = true;
         }
+
         if(this.state.message !== '') {
             message = true;
         }
+
         if(name && email && message) {
             correct = true;
         }
+
         return ({
             name,
             email,
@@ -110,8 +117,7 @@ export class Form extends React.Component {
 
 
     render() {
-
-        return <form>
+        return <form onSubmit={e => e.preventDefault()}>
             <label>FORMULARZ KONTAKTOWY</label><br/>
             <input type='text' name='name' placeholder='Imię' value={this.state.name}
                    onChange={this.handleChange}/>
@@ -122,7 +128,7 @@ export class Form extends React.Component {
             <input type='textarea' name='message' placeholder='Wiadomość' value={this.state.message}
                    onChange={this.handleChange}/><br/>{this.state.errors.message &&
         <span>{this.messages.message_incorrect}</span>}
-            <Button small text={'Wyślij'} onClick={this.handleOnSubmit}/>
+            <Button variant={VARIANT_SMALL} text={'Wyślij'} onClick={this.handleOnSubmit}/>
         </form>
     }
 }

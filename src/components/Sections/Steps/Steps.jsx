@@ -4,7 +4,7 @@ import arrow from "./img/arrowdown.png";
 import search from "./img/search.png";
 import delivery from "./img/delivery.png";
 import "./Steps.scss"
-import { Button } from "../../Button";
+import { Button } from "../../Button/Button";
 import { Decoration } from "../../Decoration.jsx";
 import { Step } from "./Step.jsx"
 export class Steps extends React.Component {
