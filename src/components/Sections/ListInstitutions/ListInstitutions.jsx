@@ -4,8 +4,9 @@ import './ListInstitutions.scss'
 export class Institutions extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
-            institutionsType: this.props.data.id,
+            institutionsType: (this.props.data && this.props.data.id) || '',
             currentPage: 1,
             institutionsTypePerPage: 3,
         };
