@@ -1,6 +1,7 @@
 import React from 'react';
 import './FooterForm.scss';
-import { Button } from "../Button.jsx";
+import { Button } from "../Button/Button.jsx";
+import { VARIANT_SMALL } from "../Button/Button.jsx";
 
 export class Form extends React.Component {
     constructor(props) {
@@ -19,9 +20,9 @@ export class Form extends React.Component {
     }
 
     messages = {
-        name_incorrect: "Wpisz imię",
-        email_incorrect: "Wpisz email",
-        message_incorrect: "Napisz wiadomość",
+        name_incorrect: 'Uzupełnij pole "Imię"',
+        email_incorrect: 'Nieprawidłowy adres email',
+        message_incorrect: 'Uzupełnij pole "Napisz wiadomość"',
     };
 
     handleChange = (e) => {
@@ -53,6 +54,7 @@ export class Form extends React.Component {
 
     handleOnSubmit = (e) => {
         e.preventDefault();
+        e.stopPropagation();
 
         const validation = this.formValidation();
         console.log(validation);
@@ -113,16 +115,13 @@ export class Form extends React.Component {
 
         return <form>
             <label>FORMULARZ KONTAKTOWY</label><br/>
-            <input type='text' name='name' placeholder='Imię' value={this.state.name}
+            <input type='text' name='name' placeholder= {this.state.errors.name? this.messages.name_incorrect : 'Imię'} value={this.state.name}
                    onChange={this.handleChange}/>
-            {this.state.errors.name && <span>{this.messages.name_incorrect}</span>}
-            <input type='email' name='email' placeholder='Email' value={this.state.email}
+            <input type='email' name='email' placeholder={this.state.errors.email? this.messages.email_incorrect : 'Email'} value={this.state.email}
                    onChange={this.handleChange}/><br/>
-            {this.state.errors.email && <span>{this.messages.email_incorrect}</span>}
-            <input type='textarea' name='message' placeholder='Wiadomość' value={this.state.message}
-                   onChange={this.handleChange}/><br/>{this.state.errors.message &&
-        <span>{this.messages.message_incorrect}</span>}
-            <Button small text={'Wyślij'} onClick={this.handleOnSubmit}/>
+            <input type='textarea' name='message' placeholder={this.state.errors.message? this.messages.message_incorrect : 'Wiadomość'} value={this.state.message}
+                   onChange={this.handleChange}/><br/>
+            <Button variant={VARIANT_SMALL} text={'Wyślij'} onClick={this.handleOnSubmit}/>
         </form>
     }
 }

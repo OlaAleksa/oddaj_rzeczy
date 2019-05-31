@@ -4,8 +4,8 @@ import arrow from "./img/arrowdown.png";
 import search from "./img/search.png";
 import delivery from "./img/delivery.png";
 import "./Steps.scss"
-import { Button } from "../../Button";
-import { Decoration } from "../../Decoration.jsx";
+import { Button, VARIANT_BIG } from "../../Button/Button";
+import { Decoration } from "../../Decoration/Decoration.jsx";
 import { Step } from "./Step.jsx"
 export class Steps extends React.Component {
     render() {
@@ -35,7 +35,7 @@ export class Steps extends React.Component {
             </div>
             <div className="Steps__btn">
                 <a href="#header">
-                    <Button big text={'ZORGANIZUJ ZBIÓRKĘ'}/>
+                    <Button variant={VARIANT_BIG} text={'ZORGANIZUJ ZBIÓRKĘ'}/>
                 </a>
             </div>
         </div>

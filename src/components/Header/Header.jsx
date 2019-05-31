@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './Header.scss';
-import { Button } from '../Button.jsx'
-import { Decoration } from '../Decoration.jsx'
+import { Button, VARIANT_BIG } from '../Button/Button.jsx'
+import { Decoration } from '../Decoration/Decoration.jsx'
 // import { UserService } from '../../services/user.service';
 
 export class Header extends React.Component {
@@ -47,8 +47,8 @@ export class Header extends React.Component {
             <div className="Header__box">
                 <Decoration text={['Zacznij pomagać!', 'Oddaj niechciane rzeczy w zaufane ręce']}/>
                 <div className="Header__box-btns">
-                    <Button text={'ODDAJ RZECZY'}/>
-                    <Button text={'ZORGANIZUJ ZBIÓRKĘ'}/>
+                    <Button variant={VARIANT_BIG} text={'ODDAJ RZECZY'}/>
+                    <Button variant={VARIANT_BIG} text={'ZORGANIZUJ ZBIÓRKĘ'}/>
                 </div>
             </div>
 

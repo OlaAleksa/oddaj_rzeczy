@@ -1,5 +1,5 @@
 import React from "react";
-import { Decoration } from "../../Decoration.jsx";
+import { Decoration } from "../../Decoration/Decoration.jsx";
 import "./List.scss"
 import { Institutions } from "./ListInstitutions.jsx"
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.scss';
 import fb from './img/fb.png';
 import instagram from './img/instagram.png';
-import { Decoration } from "../Decoration.jsx";
+import { Decoration } from "../Decoration/Decoration.jsx";
 import { Form } from './FooterForm.jsx';
 
 export class Footer extends React.Component {

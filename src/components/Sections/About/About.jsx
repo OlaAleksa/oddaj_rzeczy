@@ -1,5 +1,5 @@
 import React from "react";
-import { Decoration } from "../../Decoration";
+import { Decoration } from "../../Decoration/Decoration";
 import './About.scss'
 
 export class About extends React.Component {
