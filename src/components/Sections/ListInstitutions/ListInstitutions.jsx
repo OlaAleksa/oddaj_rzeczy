@@ -5,9 +5,9 @@ export class Institutions extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            foundations: ["jakaś", "jakaś", "jakaś", "jakaś", "jakaś", "jakaś", "jakaś", "jakaś"],
+            institutionsType: this.props.data.id,
             currentPage: 1,
-            foundationsPerPage: 3,
+            institutionsTypePerPage: 3,
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -20,28 +20,28 @@ export class Institutions extends React.Component {
 
 
     render() {
-        const {foundations, currentPage, foundationsPerPage} = this.state;
+        const {institutionsType, currentPage, institutionsTypePerPage} = this.state;
 
-        const indexOfLastFoundation = currentPage * foundationsPerPage;
-        const indexOfFirstFoundation = indexOfLastFoundation - foundationsPerPage;
-        const currentFoundations = foundations.slice(indexOfFirstFoundation, indexOfLastFoundation);
+        const indexOfLastInstitutionType = currentPage * institutionsTypePerPage;
+        const indexOfFirstInstitutionType = indexOfLastInstitutionType - institutionsTypePerPage;
+        const currentInstitutionsType = institutionsType.slice(indexOfFirstInstitutionType, indexOfLastInstitutionType);
 
-        const renderFoundations = currentFoundations.map((foundation, index) =>{
+        const renderInstitutionsType = currentInstitutionsType.map((institutionType, index) =>{
             return <div key={index} className="List__institutions-container-institutions">
                 <div className="box-right">
-                    <h3>Fundacja "{foundation}"</h3>
-                    <p>Cel i misja: {foundation}</p>
+                    <h3>{this.props.data.name}"</h3>
+                    <p>Cel i misja: {this.props.data.goal}</p>
                     <hr/>
                 </div>
                 <div className="box-left">
-                    <p>{foundation}</p>
+                    <p>{this.props.data.description}</p>
                     <hr/>
                 </div>
             </div>
         });
 
         const pageNumbers = [];
-        for (let i =1; i<= Math.ceil(foundations.length / foundationsPerPage); i++) {
+        for (let i =1; i<= Math.ceil(institutionsType.length / institutionsTypePerPage); i++) {
             pageNumbers.push(i);
         }
 
@@ -57,7 +57,7 @@ export class Institutions extends React.Component {
             );
         });
         return <div className="List__institutions-container">
-                {renderFoundations}
+                {renderInstitutionsType}
             <ul className="List__pagination-container">
                 {renderPageNumbers}
             </ul>
