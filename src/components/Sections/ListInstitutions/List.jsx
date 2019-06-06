@@ -1,8 +1,10 @@
 import React from "react";
 
 import { Decoration } from "../../Decoration/Decoration.jsx";
-import { Institutions } from "./ListInstitutions.jsx"
-import firebase from '../../../firebase.js';
+//import { Institutions } from "./ListInstitutions.jsx"
+
+import { FirebaseService } from "../../../services/firebase.service";
+
 import "./List.scss"
 
 export class List extends React.Component {
@@ -47,27 +49,35 @@ export class List extends React.Component {
                 <p>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić
                     czym się zajmują, komu pomagają i czego potrzebują.</p>
             </div>
-            <Institutions/>
+            {/*<Institutions/>*/}
         </div>
     }
 
     componentDidMount() {
-        const institutionsRef = firebase.database().ref('institutions');
+        const institutionsRef = FirebaseService.instance.database().ref('institutions');
+
+        console.log(institutionsRef);
+
         institutionsRef.on('value', (snapshot) => {
+            console.log(snapshot);
             let institutions = snapshot.val();
-            let newState = [];
-            for (let institution in institutions) {
-                newState.push({
-                    type: institution,
-                    id: institutions[institution].id,
-                    name: institutions[institution].id.name,
-                    goal: institutions[institution].id.date,
-                    description: institutions[institution].id.description,
-                });
-            }
-            this.setState({
-                institutions: newState
-            });
+
+            console.log(institutions);
+            // let newState = [];
+            //
+            // for (let institution in institutions) {
+            //     newState.push({
+            //         type: institution.type,
+            //         id: institution.id,
+            //         name: institution.name,
+            //         goal: institutions[institution].date,
+            //         description: institutions[institution].description,
+            //     });
+            // }
+            //
+            // this.setState({
+            //     institutions: newState
+            // });
         });
     }
 }
