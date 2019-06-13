@@ -1,0 +1,56 @@
+.Form__steps-step {
+  position: absolute;
+  height: 600px;
+  width: 700px;
+  top: 20px;
+  left: 120px;
+  text-align: left;
+  line-height: 50px;
+  font-size: 20px;
+
+  &--press {
+
+    &--fields {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 20px;
+
+      .field {
+        border: 1px solid black;
+        padding: 0px 15px;
+        margin: 5px 3px;
+
+        &:hover {
+          cursor: pointer;
+          background: #ffee78;
+        }
+      }
+
+      .selected {
+        background: #ffee78;
+      }
+    }
+  }
+
+  &--text {
+    margin-top: 20px;
+
+    input {
+      width: 520px;
+      height: 65px;
+      resize: none;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  }
+
+  &--btns {
+    display: block;
+    margin-top: 20px;
+
+    button {
+      margin-right: 20px;
+
+    }
+  }
+}

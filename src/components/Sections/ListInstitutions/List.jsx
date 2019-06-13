@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Decoration } from "../../Decoration/Decoration.jsx";
-//import { Institutions } from "./ListInstitutions.jsx"
+// import { Institutions } from "./ListInstitutions.jsx"
 
 import { FirebaseService } from "../../../services/firebase.service";
 
@@ -63,21 +63,21 @@ export class List extends React.Component {
             let institutions = snapshot.val();
 
             console.log(institutions);
-            // let newState = [];
-            //
-            // for (let institution in institutions) {
-            //     newState.push({
-            //         type: institution.type,
-            //         id: institution.id,
-            //         name: institution.name,
-            //         goal: institutions[institution].date,
-            //         description: institutions[institution].description,
-            //     });
-            // }
-            //
-            // this.setState({
-            //     institutions: newState
-            // });
+            let newState = [];
+
+            for (let institution in institutions) {
+                newState.push({
+                    type: institution.type,
+                    id: institution.id,
+                    name: institution.name,
+                    goal: institutions[institution].date,
+                    description: institutions[institution].description,
+                });
+            }
+
+            this.setState({
+                institutions: newState
+            });
         });
     }
 }

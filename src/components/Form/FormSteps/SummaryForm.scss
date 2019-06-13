@@ -1,0 +1,38 @@
+.Form__steps-step {
+  position: absolute;
+  height: 600px;
+  width: 700px;
+  top: 20px;
+  left: 120px;
+  text-align: left;
+  line-height: 50px;
+  font-size: 20px;
+
+  &--btns {
+    display: block;
+    margin-top: 20px;
+
+    button {
+      margin-right: 20px;
+
+    }
+  }
+
+  &--box {
+    height: 450px;
+    width: 800px;
+    display: flex;
+
+    .smallBox {
+      font-size: 17px;
+      line-height: 70px;
+
+      input {
+        font-size: 17px;
+        background: transparent;
+        border: 1px solid black;
+        height: 45px;
+      }
+    }
+  }
+}

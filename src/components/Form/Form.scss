@@ -1,0 +1,21 @@
+.Form {
+
+  &__message {
+    background: #ffee78;
+    height: 150px;
+    text-align: left;
+    padding: 40px 70px;
+    font-size: 20px;
+    line-height: 35px;
+    margin-top: -1px;
+  }
+
+  &__steps {
+    background-image: url("teddy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    position: relative;
+  }
+
+}
