@@ -11,7 +11,7 @@ export class App extends React.Component {
         return <div className="App">
                 <Header/>
                 <Form/>
-                <Sections/>
+                {/*<Sections/>*/}
                 <Footer/>
             </div>
      }

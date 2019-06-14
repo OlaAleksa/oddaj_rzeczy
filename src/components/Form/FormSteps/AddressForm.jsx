@@ -1,25 +1,14 @@
-import React from 'react';
+import React from 'react'
 import { Button, VARIANT_SMALL } from "../../Button/Button";
-import './SummaryForm.scss';
-import hand from './img/hand.png'
-import bag from './img/bag.png'
+import './AddressForm.scss'
 
-export class SummaryForm extends React.Component {
+export class AddressForm extends React.Component {
     render() {
         return <div className="Form__steps-step">
-            <h3>Podsumowanie Twojej darowizny</h3>
-            <p>Oddajesz:</p>
-            <div className="Form__steps-step--icon">
-                <img src={bag}/>
-                <p>4 worki ubrań w dobrym stanie dla dzieci</p>
-            </div>
-            <div className="Form__steps-step--icon">
-                <img src={hand}/>
-                <p>Dla fundacji "Mam marzenie" w Warszawie</p>
-            </div>
+            <p>Krok 4/4</p>
+            <h3>Podaj adres oraz termin odbioru rzeczy przez kuriera:</h3>
             <div className="Form__steps-step--box">
                 <form className="smallBox">
-                    <p>Adres odbioru</p>
                     <div className="position-box">
                         <p>Ulica</p>
                         <input type="text" name="ulica"/><br/>
@@ -38,7 +27,6 @@ export class SummaryForm extends React.Component {
                     </div>
                 </form>
                 <form className="smallBox">
-                    <p>Termin odbioru</p>
                     <div className="position-box">
                         <p>Data</p>
                         <input type="text" name="data"/><br/>
@@ -54,9 +42,10 @@ export class SummaryForm extends React.Component {
                 </form>
             </div>
             <div className="Form__steps-step--btns">
-                <Button variant={VARIANT_SMALL} text={'Wstecz'}/>
-                <Button variant={VARIANT_SMALL} text={'Potwierdzam'}/>
+                <Button variant={VARIANT_SMALL} text={'Cofnij'}/>
+                <Button variant={VARIANT_SMALL} text={'Dalej'}/>
             </div>
         </div>
+
     }
 }

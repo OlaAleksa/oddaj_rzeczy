@@ -1,12 +1,13 @@
 import React from 'react';
 
 import './Form.scss';
-import CheckboxesGroup from "./FormSteps/CheckboxForm";
+// import CheckboxesGroup from "./FormSteps/CheckboxForm";
 // import {ThanksForm} from "./FormSteps/ThanksForm";
 // import SimpleSelect from "./FormSteps/SelectForm.jsx"
 // import InstitutionSelect from "./FormSteps/InstitutionSelectForm.jsx"
 // import {InstitutionListForm} from "./FormSteps/InstitutionListForm.jsx"
-// import {SummaryForm} from "./FormSteps/SummaryForm.jsx"
+import {SummaryForm} from "./FormSteps/SummaryForm.jsx";
+// import { AddressForm } from "./FormSteps/AddressForm";
 
 
 
@@ -19,12 +20,13 @@ export class Form extends React.Component {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis, massa sed molestie convallis, mi nibh dapibus dui, non sagittis lorem lectus a nibh. Sed sed molestie purus.</p>
             </div>
             <div className="Form__steps">
-                    <CheckboxesGroup/>
+                    {/*<CheckboxesGroup/>*/}
                     {/*<ThanksForm/>*/}
                     {/*<SimpleSelect text={'Wszystkie rzeczy do oddania zapakuj w 60 l worki. Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz TUTAJ'}/>*/}
                     {/*<InstitutionSelect/>*/}
                     {/*<InstitutionListForm/>*/}
-                    {/*<SummaryForm/>*/}
+                    <SummaryForm/>
+                    {/*<AddressForm/>*/}
             </div>
         </div>
     }
